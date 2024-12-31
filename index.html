@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mini Project</title>
+        <style>
+            fieldset{
+                width: 60%;
+                border-radius: 20px;
+                border-color: black;
+            }
+            input:required{
+                border: 2px solid red;
+            }
+            input:optional{
+                border:2px dashed green;
+            }
+            body{
+                background: rgb(238,183,241);
+                background: linear-gradient(90deg, rgba(238,183,241,0.9838060224089635) 36%, rgba(148,180,233,1) 58%);
+            input:hover{
+                background-color: beige;
+            }
+            input[read-only]{
+                background-color:aqua;
+                font-weight: bold;
+            }
+            input:focus{
+                background-color: aquamarine;
+                font-weight:bold;
+            }
+            input[type="radio"]:checked{
+                height: 15px;
+                color: blue;
+            }
+            input[type="radio"]:checked+label{
+                font-size:large;
+                font-weight:bold;
+            }
+            select{
+                background-color:burlywood;
+            }
+            p{
+                display :none;
+            }
+        input:hover+p{
+            display:inline;
+            background-color: darkseagreen;
+        }
+        .button{
+            background-color: blue;
+            border:black solid;
+        }
+        legend{
+            font-weight: bold;
+            font-size: large;
+        }
+            
+
+
+        </style>
+
+    </head>
+    <body>
+        <h1>COURSE REGISTRATION FORM</h1>
+        <form>
+            <fieldset  >
+                <legend >Personal Details</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label >First Name</label>
+                        </td>
+                        <td>
+                            <input type="text" placeholder="Ex:Bhavya" required>
+                            <p>Enter your name</p>
+                        </td>
+                        
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Surname</label>
+                            </td>
+                            <td>
+                                <input type="text" placeholder="Ex:Mallemkondu" optinal>
+                                <p>Enter your surname</p>
+                            </td>
+                        </tr>
+                        <tr>
+                           <td><label> Mobile no.</label></td> 
+                           <td><input type="tel" placeholder="9876543210" required>
+                            <p>Enter your phone no.</p></td>
+                           
+                        </tr>
+                        <tr>
+                            <td><label>Email</label></td>
+                            <td><input type="email" placeholder="bhavya@gmail.com" required>
+                                <p>Enter a valid email address</p></td>
+                           
+                        </tr>
+                        <tr>
+                            <td><label>Password</label></td>
+                            <td><input type="password" placeholder="min 5 characters reqiured" required>
+                                <p>Enter passwordthat contain 1 uppercase,1 lowercase,1 spl character</p></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><label>Confirm Password</label></td>
+                            <td> <input type="password"  placeholder="similar to entered pswd" reqiured></td>
+                        </tr>
+                        <tr>
+                            <td><label>Date Of Birth</label></td>
+                            <td><input type="date" required ></td>
+                        </tr>
+                        <tr>
+                            <td> <label>Gender</label></td>
+                            <td><input type="radio" value="M" name="gender">
+                                <label>Male</label>
+                                <input type="radio" value="F" name="gender">
+                                <label>Female</label>
+                                <input type="radio" value="O" name="gender">
+                                <label>Others</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Country</label></td>
+                            <td><select >
+                                <option>India</option>
+                                <option>Australia</option>
+                                <option>USA</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td><label>Upload Picture</label></td>
+                            <td><input type="file" optional></td>
+                        </tr>
+                        <tr><td><input type="reset" class="button" ></td></tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Course Details</legend>
+                <table>
+                    <tr>
+                        <td><label>Select Course</label></tr><br>
+                        <tr><td><select>
+                            <option>Python Full Stack</option>
+                            <option>Java Full Stack</option>
+                            <option>Mern Stack</option>
+                        </select><td></tr>
+                            <tr><td>Institute name</td>
+                            <td><input type="text" value="Tap Academy" read-only></td></tr>
+                    
+                    <tr><td><label>Delivery Mode</label></td>
+                        <td><input type="radio" name="opt"><label>Online</label>
+                        <input type="radio" name="opt"><label>Offline</label>
+                        </td>
+
+                    </tr>
+                    <tr><td><label>Comments</label></td></tr>
+                    
+                <tr><td>
+                    <textarea rows="6" cols="20"></textarea></td>
+                </tr>
+                <TR>
+                    <TD>
+                        <input type="submit" class="button">
+                    </TD>
+                </TR>
+                    
+                </table>
+            </fileldset>
+        </form>
+    </body>
+</html>
